@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/images/body1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+header {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 0 7px;
+}
+
+header img {
+    width: 70px;
+}
+
+header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition-duration: 0.3s;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+header nav.show {
+    margin-left: 0;
+}
+
+header nav .links {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: left;
+    justify-content: flex-start;
+}
+
+header nav .links section {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    
+    padding: 10px 20px;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+header nav .links section:hover {
+    background-color: rgba(24, 119, 141, 0.4);
+    cursor: pointer;
+}
+
+header .menuDesplegable {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border: none;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.3s;
+}
+
+header .menuDesplegable .pMenu {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    transition-duration: 0.3s;
+    padding: 0 20px;
+}
+
+header .menuDesplegable .pMenu:hover {
+    background-color: rgba(24, 119, 141, 0.4);
+}
+
+header .menuDesplegable.close .pMenu {
+    display: none;
+    cursor: pointer;
+}
+
+header .menuDesplegable.close .pX {
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 100;
+    color: white;
+    padding: 15px;
+    transition-duration: 0.3s;
+}
+
+header .menuDesplegable.close .pX:hover {
+    background-color: rgb(24, 119, 141)
+}
+
+header .menuDesplegable .pX {
+    display: none;
+    cursor: pointer;
+}
+
+.mainIndex .solapa1 {
+    background-color: rgb(255, 255, 255, 0.75);
+    width: 40%;
+    height: 80vh;
+    margin-left: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    min-width: 170px;
+}
+
+.mainIndex .solapa1 .logo {
+    margin-top: 10vh;
+    height: 7vw;
+    max-height: 50px;
+}
+
+.mainIndex .solapa1 .contenido {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    padding: 22vh 0;
+}
+
+.mainIndex .solapa1 .scrolldown {
+    width: 5%;
+    min-width: 50px;
+}
+
+.mainIndex .solapa2 {
+    background-color: white;
+    box-shadow: 0px 0px 28px 8px rgba(0,0,0,0.4);
+    padding: 3%;
+    min-width: 170px;
+}
+
+.mainIndex .gridCartelera {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.mainIndex .solapa3 {
+    background-color: rgb(255, 255, 255, 0.75);
+    margin: 10vh 2vw;
+    padding: 5%;
+}
+
+
+.mainIndex .solapa3 .contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+}
+
+.mainIndex .solapa3 .mapaIMG {
+    width: 5px;
+    min-width: 600px;
+}
+
+.mainIndex .solapa3 p {
+    margin: 2%;
+}
+
+.mainIndex .solapa4 {
+    background-color: white;
+    box-shadow: 0px 0px 28px 8px rgba(0,0,0,0.4);
+    padding: 1%;
+    margin-bottom: 5%;
+}
+
+.mainIndex .solapa4 .logoRedes {
+    margin: 0 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainIndex .solapa4 p {
+    margin-bottom: 2%;
+}
+
+.mainIndex .solapa4 .logoRedes img {
+    margin: 5px 0 10px 0;
+    width: 30px;
+    transition-duration: 0.4s;
+}
+
+.mainIndex .solapa4 .logoRedes img:hover {
+    width: 3.5vw;
+}
+
+.mainProductos aside {
+    background-color: rgb(255, 255, 255, 0.75);
+}
+
+.mainProductos aside ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.mainProductos aside ul a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding: 10px;
+    transition-duration: 0.2s;
+}
+
+.mainProductos aside ul a:hover {
+    color: white;
+    background-color: rgba(24, 119, 141, 0.4);
+}
+
+.mainProductos content .tipoProducto {
+    background-color: #18778D;
+    text-align: center;
+}
+
+.mainProductos content .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    background-color: white;
+    padding: 5%;
+}
+
+.mainProductos #linkAutos, #linkCamionetas, #linkMotos {
+    color: rgb(211, 211, 211);
+    font-size: 30px;
+}
+
+.mainContacto .solapa {
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: 2.5% 5%;
+}
+
+.mainContacto .solapa form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 2% 15%;
+}
+
+.mainContacto .solapa form label {
+    font-family: 'Bebas Neue';
+    font-size: x-large;
+    margin: 10px 0;
+}
+
+.mainContacto .solapa input, textarea, button {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 40px;
+    transition-duration: 0.4s;
+}
+
+.mainContacto .solapa form .sombreado:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mainContacto .solapa form .cajaCaptcha{
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.322);
+}
+
+.mainContacto .solapa form .textoCaptcha {
+    color: rgb(77, 77, 77);
+    letter-spacing: 10px;
+    background-image: url(/images/bgcaptcha.webp);
+    font-size: xx-large;
+    font-family: 'Gloria Hallelujah';
+    margin: 10px 0;
+    padding:  10px 50px;
+}
+
+.mainContacto .solapa form .cajaCaptcha button {
+    margin-top: 10px;
+}
+
+.mainContacto .solapa form .validacion {
+    padding: 10px;
+}
+
+.mainContacto .seccionComentarios {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mainContacto .seccionComentarios textarea {
+    background-color: white;
+}
+
+.mainContacto .seccionComentarios .inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+    width: 50%;
+    align-content: center;
+}
+
+.mainContacto .seccionComentarios .inputs button {
+    width: 75px;
+}
+
+.mainContacto .tablaComentarios {
+    margin: 0 auto;
+    color: black;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.mainContacto .tablaComentarios tbody tr {
+    justify-content: space-between;
+    background-color: rgb(216, 216, 216);
+}
+
+.mainContacto .tablaComentarios tbody td {
+    width: 33%;
+}
+
+.mainContacto .tablaComentarios th {
+    background-color: #18778D;
+    color: white;
+}
+
+.mainContacto .inputs input, textarea, button, select {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 40px;
+    transition-duration: 0.4s;
+}
+
+.mainContacto .inputs p {
+    margin: 10px 0;
+}
+
+.mainContacto .divFiltro {
+    margin: 10px 10px;
+    display: flex;
+}
+
+.mainContacto .botonFiltro {
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.mainContacto .botonesComentarios {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.mainContacto .botonComentario {
+    margin: 0 5px;
+}
+
+.mainContacto .btnOpcionales {
+    margin: 2px;
+    background-color: #bbbbbb;
+    border: none;
+    transition-duration: 0.4s;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.mainContacto .btnOpcionales:hover {
+    background-color: #a5a5a5;
+}
+
+.mainRaptor {
+    background-image: url(/images/dirt.webp);
+    background-size: cover;
+}
+
+.mainRaptor .solapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainRaptor .fotoGrande {
+    width: 90vw;
+}
+
+.mainRaptor .division {
+    text-align: center;
+}
+
+.mainRaptor .solapaNegra {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mainRaptor h3 {
+    text-align: center;
+    font-size: 50px;
+    background-color: rgb(34, 34, 34);
+    margin: 30px 0;
+    padding: 5px;
+    box-shadow: 5px 5px 0px 0px rgba(24,119,141,1);
+}
+
+.mainRaptor .subtitulo {
+    padding: 2% 0;
+    margin: 5% 0;
+    font-family: Goldman;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 255, 255, 0.75);
+}
+
+.mainRaptor .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 10px;
+    background-color: rgba(212, 212, 212, 0);
+    margin: 2%;
+}
+
+.mainRaptor .cartaInfor {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+}
+
+.mainRaptor .cartaInfor .detalle {
+    color: white;
+    font-family: 'Montserrat';
+    padding: 2% 5%;
+}
+
+.mainRaptor .cartaInfor img {
+    width: 50vw;
+}
+
+.mainRaptor .solapaNegra ul {
+    list-style: square;
+    margin-left: 20%;
+}
+
+.mainRaptor .solapaNegra ul li {
+    font-family: Goldman;
+    font-size: 15px;
+    color: rgb(255, 255, 255, 0.75);
+    padding: 1% 0;
+    text-align: left;
+}
+
+.mainRaptor .tablaRaptor, .tablaRaptor th, .tablaRaptor td {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: 'Montserrat';
+    text-align: center;
+}
+
+.mainRaptor .tablaRaptor {
+    margin: 20px;
+}
+
+.mainRaptor .tablaRaptor td {
+    padding: 1% 0.2%;
+}
+
+.mainRaptor .tablaRaptor th {
+    font-family: 'Bebas Neue';
+    font-size: 5vw;
+}
+
+.mainRaptor .tablaRaptor td {
+    font-size: 3vw;
+}
+
+
+
+h3 {
+    color: #18778D;
+    font-size: 25px;
+    font-family: 'Bebas Neue';
+}
+
+h5, .fuenteBebas {
+    font-family: 'Bebas Neue';
+}
+
+.carta {
+    text-align: center;
+    border: 1px solid rgba(233, 233, 233, 0.7);
+    border-radius: 4%;
+    margin: 1% 0.5%;
+    padding: 2;
+    background-color: rgba(212, 212, 212, 0.15);
+    height: 100%;
+    transition-duration: 0.4s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carta:hover {
+    background-color: rgba(235, 235, 235, 0.8);
+    margin: 0% 0.5%;
+}
+
+.carta h5 {
+    font-size: 20px;
+    margin: 15px 4%;
+}
+
+.carta .fotocarta {
+    width: 80%;
+    margin: 4% 0;
+}
+
+.carta p {
+    font-size: 15px;
+    margin: 3% 0;
+}
+
+.carta a {
+    margin-top: 2%;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.carta a:hover {
+    color: #0c4c5a;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+}
+
+footer p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.selected {
+    color: red;
+}
+
+
+@media screen and (min-width: 768px) {
+    .menuDesplegable {
+        display: none;
+    }
+
+    header {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+    header nav {
+        position: static;
+        margin-left: 0;
+        flex-basis: 70%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    header nav .links {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: transparent;
+    }
+
+    header nav .links a {
+        display: inline-block;
+        margin-top: 0;
+        margin-right: 2rem;
+    }
+
+    header .menuDesplegable p {
+        display: none;
+    }
+
+    .mainIndex .gridCartelera {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    .mainIndex .solapa3 {
+        padding: 2%;
+    }
+    
+    
+    .mainIndex .solapa3 .mapaIMG {
+        width: 900px;
+    }
+
+    .mainIndex .solapa4 p {
+        font-size: 20px;
+    }
+    
+    .mainIndex .solapa4 .logoRedes img {
+        width: 45px;
+    }
+
+    .mainProductos {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .mainProductos aside {
+        width: 15%;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+    
+    .mainProductos aside ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mainProductos aside ul a {
+        padding: 10px 0px;
+    }
+        
+    .mainProductos aside ul li {
+        margin: 5px 0 5px 0;
+        padding: 10px 50px 10px 5px;
+        transition-duration: 0.4s;
+    }
+    
+    .mainProductos aside ul li:hover {
+        background-color: transparent;
+    }
+    
+    .mainProductos content {
+        width: 85%;
+        margin-left: auto;
+    }
+    
+    .mainProductos content .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+        
+    .mainContacto .solapa form label {
+        font-size: xx-large;
+    }
+    
+    .mainContacto .solapa input, textarea, button {
+        width: 70%;
+    }
+    
+    .mainContacto .solapa form .textoCaptcha {
+        letter-spacing: 30px;
+    }
+    
+    .mainContacto .seccionComentarios {
+        padding: 5px 15px;
+    }
+    
+    .mainContacto .seccionComentarios textarea {
+        width: 100%;
+    }
+    
+    .mainRaptor .solapa {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .mainRaptor .fotoGrande {
+        width: 45vw;
+    }
+    
+    .mainRaptor .division {
+        width: 50%;
+    }
+    
+    .mainRaptor h3 {
+        margin: 0 100px;
+    }
+    
+    .mainRaptor .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .mainRaptor .cartaInfor img {
+        width: 100%;
+    }
+    
+    .mainRaptor .solapaNegra ul li {
+        font-size: 1.5vw;
+    }
+    
+    .mainRaptor .tablaRaptor {
+        margin: 2%;
+    }
+    
+    .mainRaptor .tablaRaptor th {
+        font-size: x-large;
+    }
+
+    .mainRaptor .tablaRaptor td {
+        font-size: large;
+    }
+    
+    h3 {
+        font-size: 40px;
+    }
+}
